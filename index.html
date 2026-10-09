@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFD500">
+    <meta name="description" content="Marco$tore : découvrez nos sandales et chaussures. Commandez directement sur WhatsApp.">
+
+    <title> MARCOSTORE 🩴👟 | Boutique</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#accueil" class="logo" onclick="showPage('accueil'); return false;">
+            <span class="logo-icon">M$</span>
+            Marco<span class="logo-red">$tore</span>
+        </a>
+
+        <nav class="navbar">
+            <button class="nav-btn active" data-page="accueil">Accueil</button>
+            <button class="nav-btn" data-page="articles">Nos Articles</button>
+            <button class="nav-btn" data-page="contact">Contact</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PAGE 1 : ACCUEIL -->
+        <section id="accueil" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">BIENVENUE CHEZ MARCO$TORE</p>
+
+                    <h1>
+                        TON STYLE.<br>
+                        <span>TON IDENTITÉ.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Découvrez notre collection de sandales et de chaussures.
+                        Le style que vous recherchez commence ici !
+                    </p>
+
+                    <button class="btn btn-yellow" onclick="showPage('articles')">
+                        DÉCOUVRIR NOS ARTICLES →
+                    </button>
+
+                    <button class="btn btn-outline" onclick="showPage('contact')">
+                        NOUS CONTACTER
+                    </button>
+                </div>
+
+                <div class="hero-decoration">
+                    <div class="hero-circle">
+                        <span>🩴</span>
+                        <span>👟</span>
+                    </div>
+                    <p>STYLE • QUALITÉ • ÉLÉGANCE</p>
+                </div>
+            </div>
+
+            <div class="intro section">
+                <p class="eyebrow">NOTRE BOUTIQUE</p>
+                <h2>Bienvenue dans notre <span>univers !</span></h2>
+
+                <p>
+                    Chez Marco$tore, nous vous aidons à trouver des articles
+                    pour compléter votre style. Parcourez nos produits,
+                    choisissez votre préféré et commandez facilement.
+                </p>
+
+                <button class="btn btn-red" onclick="showPage('articles')">
+                    EXPLORER LA BOUTIQUE
+                </button>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <span>🛍️</span>
+                    <h3>Nos articles</h3>
+                    <p>Découvrez nos différents modèles.</p>
+                </div>
+
+                <div class="benefit">
+                    <span>📱</span>
+                    <h3>Commande facile</h3>
+                    <p>Commandez directement sur WhatsApp.</p>
+                </div>
+
+                <div class="benefit">
+                    <span>❤️</span>
+                    <h3>À votre service</h3>
+                    <p>Contactez-nous pour toute information.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 2 : ARTICLES -->
+        <section id="articles" class="page">
+            <div class="section">
+                <p class="eyebrow center">DÉCOUVREZ NOTRE COLLECTION</p>
+                <h1 class="section-title">NOS <span>ARTICLES</span></h1>
+
+                <p class="section-description">
+                    Choisissez un modèle et cliquez sur sa photo ou sur
+                    le bouton pour passer votre commande.
+                </p>
+
+                <div class="products">
+
+                    <article class="product">
+                        <img src="Adidas.png"
+                             alt="Adidas"
+                             loading="lazy"
+                             onclick="orderProduct('Adidas', 'Unite 2500 gdes / 3 paires 4000 gdes')">
+
+                        <div class="product-info">
+                            <span class="product-category">SANDALES</span>
+                            <h3>Adidas</h3>
+                            <p class="price">Unite 2500 gdes / 3 paires 4000 gdes</p>
+
+                            <button class="btn btn-yellow order-btn"
+                                    onclick="orderProduct('Adidas', 'Unite 2500 gdes / 3 paires 4000 gdes')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+
+
+
+                    <article class="product">
+                        <img src="gucci.png"
+                             alt="Gucci"
+                             loading="lazy"
+                             onclick="orderProduct('Gucci', 'Unite 2500 gdes / 3 paires 4000 gdes')">
+
+                        <div class="product-info">
+                            <span class="product-category">SANDALES</span>
+                            <h3>Gucci</h3>
+                            <p class="price">Unite 2500 gdes / 3 paires 4000 gdes</p>
+
+                            <button class="btn btn-black order-btn"
+                                    onclick="orderProduct('Gucci', 'Unite 2500 gdes / 3 paires 4000 gdes')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+
+
+
+                    <article class="product">
+                        <img src="Retro3rougeetgris.png"
+                             alt="Retro 3"
+                             loading="lazy"
+                             onclick="orderProduct('Retro 3 rouge et gris', 'Unite 7 000 gdes')">
+
+                        <div class="product-info">
+                            <span class="product-category">TENIS</span>
+                            <h3>Retro 3</h3>
+                            <p class="price">Unite 7 000 gdes</p>
+
+                            <button class="btn btn-yellow order-btn"
+                                    onclick="orderProduct('Retro 3 rouge et gris', 'Unite 7 000 gdes')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+
+
+
+                      <article class="product">
+                        <img src="Adidas.png"
+                             alt="Adidas"
+                             loading="lazy"
+                             onclick="orderProduct('Adidas', 'Unite 2500 gdes / 3 paires 4000 gdes')">
+
+                        <div class="product-info">
+                            <span class="product-category">SANDALES</span>
+                            <h3>Adidas</h3>
+                            <p class="price">Unite 2500 gdes / 3 paires 4000 gdes</p>
+
+                            <button class="btn btn-yellow order-btn"
+                                    onclick="orderProduct('Adidas', 'Unite 2500 gdes / 3 paires 4000 gdes')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+                    
+                    
+
+
+
+
+
+
+
+
+
+                    <article class="product">
+                        <img src="images/sandal2.jpg"
+                             alt="Sandale modèle 2"
+                             loading="lazy"
+                             onclick="orderProduct('Sandale modèle 2', 'Prix à confirmer')">
+
+                        <div class="product-info">
+                            <span class="product-category">SANDALES</span>
+                            <h3>Sandale modèle 2</h3>
+                            <p class="price">Prix à confirmer</p>
+
+                            <button class="btn btn-red order-btn"
+                                    onclick="orderProduct('Sandale modèle 2', 'Prix à confirmer')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product">
+                        <img src="images/chaussure1.jpg"
+                             alt="Chaussure modèle 1"
+                             loading="lazy"
+                             onclick="orderProduct('Chaussure modèle 1', 'Prix à confirmer')">
+
+                        <div class="product-info">
+                            <span class="product-category">CHAUSSURES</span>
+                            <h3>Chaussure modèle 1</h3>
+                            <p class="price">Prix à confirmer</p>
+
+                            <button class="btn btn-yellow order-btn"
+                                    onclick="orderProduct('Tenis modèle 1', 'Prix à confirmer')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product">
+                        <img src="images/chaussure2.jpg"
+                             alt="Chaussure modèle 2"
+                             loading="lazy"
+                             onclick="orderProduct('Chaussure modèle 2', 'Prix à confirmer')">
+
+                        <div class="product-info">
+                            <span class="product-category">CHAUSSURES</span>
+                            <h3>Chaussure modèle 2</h3>
+                            <p class="price">Prix à confirmer</p>
+
+                            <button class="btn btn-red order-btn"
+                                    onclick="orderProduct('Chaussure modèle 2', 'Prix à confirmer')">
+                                COMMANDER SUR WHATSAPP
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="note">
+                    <strong> Un article vous intéresse ?</strong>
+                    <p>Cliquez dessus pour nous envoyer votre demande sur WhatsApp.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 3 : CONTACT -->
+        <section id="contact" class="page">
+            <div class="contact section">
+                <p class="eyebrow center">NOUS SOMMES À VOTRE ÉCOUTE</p>
+                <h1 class="section-title">CONTACTEZ-<span>NOUS</span> </h1>
+
+                <p class="section-description">
+                    Une question sur un produit ? Besoin de connaître
+                    la disponibilité ou le prix ? Écrivez-nous !
+                </p>
+
+                <div class="contact-card">
+                    <div class="whatsapp-icon">✉</div>
+                    <h2>Parlons sur WhatsApp</h2>
+
+                    <p>
+                        Envoyez-nous votre message. Nous pourrons discuter
+                        de l'article qui vous intéresse et de votre commande.
+                    </p>
+
+                    <button class="btn btn-red" onclick="contactWhatsApp()">
+                        <span>💬</span> ÉCRIVEZ-NOUS SUR WHATSAPP
+                    </button>
+                </div>
+
+                <button class="btn btn-yellow back-btn" onclick="showPage('articles')">
+                    RETOUR AUX ARTICLES
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+        <a href="#accueil" class="footer-logo" onclick="showPage('accueil'); return false;">
+            Marco<span>$</span>tore 
+        </a>
+
+        <p>Votre style, notre priorité !</p>
+
+        <div class="footer-links">
+            <button onclick="showPage('accueil')">Accueil</button>
+            <button onclick="showPage('articles')">Nos articles</button>
+            <button onclick="showPage('contact')">Contact</button>
+        </div>
+
+
+
+        <!-- QR CODE MARCO$TORE -->
+<section class="qr-section" id="qrcode-section">
+    <div class="qr-card">
+        <h2> Visitez Marco$tore </h2>
+
+        <p>
+            Scannez ce QR Code pour découvrir
+            notre boutique et nos produits !
+        </p>
+
+        <div id="marco-qrcode"></div>
+
+        <p class="qr-caption">
+            Marco$tore — Le style à vos pieds !
+        </p>
+    </div>
+</section>
+
+        <p class="copyright">© 2026 Marco$tore — Tous droits réservés.</p>
+
+
+
+
+
+
+
+
+    </footer>
+
+
+
+</body>
+</html>

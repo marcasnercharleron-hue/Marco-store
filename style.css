@@ -1,0 +1,647 @@
+:root {
+    --jaune: #FFD500;
+    --rouge: #E3000B;
+    --noir: #111111;
+    --blanc: #FFFFFF;
+    --gris: #F5F5F5;
+    --texte: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--blanc);
+    color: var(--noir);
+    line-height: 1.6;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--rouge);
+    outline-offset: 4px;
+}
+
+/* HEADER */
+
+.header {
+    background: var(--noir);
+    color: var(--blanc);
+    min-height: 80px;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 5px solid var(--jaune);
+}
+
+.logo,
+.footer-logo {
+    text-decoration: none;
+    color: var(--jaune);
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    display: inline-block;
+    background: var(--jaune);
+    color: var(--noir);
+    border-radius: 7px;
+    padding: 3px 7px;
+    margin-right: 5px;
+}
+
+.logo-red,
+.footer-logo span {
+    color: var(--rouge);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-btn {
+    background: transparent;
+    color: var(--blanc);
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: var(--jaune);
+    color: var(--noir);
+}
+
+/* NAVIGATION ENTRE LES PAGES */
+
+.page {
+    display: none;
+    min-height: 65vh;
+}
+
+.page.active {
+    display: block;
+    animation: appear 0.3s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACCUEIL */
+
+.hero {
+    background: var(--noir);
+    color: var(--blanc);
+    padding: 75px 7%;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 35px;
+    border-bottom: 8px solid var(--rouge);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--rouge);
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.hero .eyebrow {
+    color: var(--jaune);
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--jaune);
+}
+
+.hero-text {
+    color: #EEEEEE;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+.hero-decoration {
+    text-align: center;
+}
+
+.hero-circle {
+    width: min(290px, 100%);
+    aspect-ratio: 1;
+    margin: auto;
+    background: var(--jaune);
+    border: 12px solid var(--rouge);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(50px, 7vw, 90px);
+}
+
+.hero-decoration p {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--jaune);
+}
+
+/* BOUTONS */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-yellow {
+    background: var(--jaune);
+    color: var(--noir);
+}
+
+.btn-red {
+    background: var(--rouge);
+    color: var(--blanc);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--blanc);
+    border-color: var(--jaune);
+    margin-left: 8px;
+}
+
+/* INTRODUCTION */
+
+.section {
+    padding: 55px 6%;
+}
+
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 15px;
+}
+
+.intro h2 span,
+.section-title span {
+    color: var(--rouge);
+}
+
+.intro p:not(.eyebrow) {
+    color: var(--texte);
+    margin-bottom: 25px;
+}
+
+/* AVANTAGES */
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 35px 6% 55px;
+    background: var(--gris);
+}
+
+.benefit {
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 4px solid var(--jaune);
+    background: var(--blanc);
+    border-radius: 8px;
+}
+
+.benefit:nth-child(2) {
+    border-bottom-color: var(--rouge);
+}
+
+.benefit span {
+    font-size: 32px;
+}
+
+.benefit h3 {
+    margin: 8px 0;
+}
+
+.benefit p {
+    color: var(--texte);
+    font-size: 14px;
+}
+
+/* ARTICLES */
+
+.section-title {
+    font-size: clamp(29px, 4vw, 42px);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+    color: var(--texte);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.product {
+    background: var(--blanc);
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #0000000D;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #00000018;
+}
+
+.product img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    padding: 12px;
+    background: var(--gris);
+    display: block;
+    cursor: pointer;
+    border-bottom: 3px solid var(--jaune);
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-category {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: var(--rouge);
+}
+
+.product h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 900;
+    color: var(--rouge);
+    margin: 10px 0 18px;
+}
+
+.order-btn {
+    width: 100%;
+    font-size: 11px;
+    padding: 12px 8px;
+}
+
+.note {
+    text-align: center;
+    background: var(--jaune);
+    padding: 22px;
+    border-radius: 8px;
+    margin-top: 35px;
+}
+
+.note p {
+    margin-top: 5px;
+}
+
+/* CONTACT */
+
+.contact {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-card {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 35px 25px;
+    background: var(--gris);
+    border-radius: 12px;
+    border-top: 7px solid var(--jaune);
+    box-shadow: 0 8px 25px #0000000D;
+}
+
+.contact-card h2 {
+    margin: 15px 0 10px;
+}
+
+.contact-card p {
+    color: var(--texte);
+    margin-bottom: 25px;
+}
+
+.whatsapp-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--rouge);
+    color: var(--blanc);
+    font-size: 32px;
+}
+
+.back-btn {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--noir);
+    color: var(--blanc);
+    text-align: center;
+    padding: 35px 20px 20px;
+    border-top: 6px solid var(--jaune);
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-links button {
+    border: none;
+    background: transparent;
+    color: var(--blanc);
+    cursor: pointer;
+}
+
+.footer-links button:hover {
+    color: var(--jaune);
+}
+
+.copyright {
+    font-size: 12px;
+    color: #BBBBBB;
+    border-top: 1px solid #444444;
+    padding-top: 15px;
+}
+
+/* TABLETTES */
+
+@media (max-width: 1000px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        grid-template-columns: 1fr 0.8fr;
+        padding: 55px 5%;
+    }
+}
+
+/* TELEFÒN */
+
+@media (max-width: 650px) {
+    .header {
+        flex-direction: column;
+        padding: 18px 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .nav-btn {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 55px 20px;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-decoration {
+        margin-top: 25px;
+    }
+
+    .hero-circle {
+        max-width: 220px;
+    }
+
+    .btn-outline {
+        margin: 12px 0 0;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product img {
+        height: 160px;
+    }
+
+    .product-info {
+        padding: 12px 9px;
+    }
+
+    .product h3 {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .order-btn {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .contact-card {
+        padding: 25px 15px;
+    }
+
+    .contact-card .btn {
+        width: 100%;
+        font-size: 11px;
+    }
+}
+
+/* TI TELEFÒN */
+
+@media (max-width: 360px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   QR CODE MARCO$TORE
+========================= */
+
+.qr-section {
+    background-color: #111111;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.qr-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    background-color: #111111;
+    border: 2px solid #C9A227;
+    border-radius: 18px;
+    box-shadow: 0 0 18px rgba(201, 162, 39, 0.2);
+}
+
+.qr-card h2 {
+    color: #C9A227;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.qr-card p {
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#marco-qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 22px auto;
+    padding: 12px;
+    background: #FFFFFF;
+    border: 3px solid #C9A227;
+    border-radius: 10px;
+}
+
+#marco-qrcode img,
+#marco-qrcode canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.qr-card .qr-caption {
+    color: #C9A227;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 480px) {
+    .qr-card {
+        padding: 22px 12px;
+    }
+
+    .qr-card h2 {
+        font-size: 21px;
+    }
+}
+
