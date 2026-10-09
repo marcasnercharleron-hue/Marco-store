@@ -10,7 +10,7 @@
 //
 // Egzanp fòma pou Ayiti: 509XXXXXXXX
 
-const WHATSAPP_NUMBER = "50936589349";
+const WHATSAPP_NUMBER = "50948107188";
 
 
 // ========================================
@@ -60,7 +60,7 @@ document.querySelectorAll(".nav-btn").forEach(function(button) {
 function isWhatsAppNumberConfigured() {
     if (
         !/^\d{8,15}$/.test(WHATSAPP_NUMBER) ||
-        WHATSAPP_NUMBER === "50936589349"
+        WHATSAPP_NUMBER === "50948107188"
     ) {
         alert(
             "Broh ! Mete vrè nimewo WhatsApp ou nan fichye script.js la avan."
